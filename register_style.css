@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url(bg_trib.jpeg) no-repeat;
+    background: url(bg_leaf.png) no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -58,15 +58,18 @@ body {
     color: #fff;
     font-size: 16px;
 }
+
 i {
     position: absolute;
     color: #fff;
     top: 13px;
     right: 0;
 }
+
 input::placeholder {
     color: #fff;
 }
+
 #captcha {
     width: 50%;
     height: 30px;
@@ -76,8 +79,10 @@ input::placeholder {
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
-    justify-content: center; /* Align text horizontally to the center */
-    align-items: center; /* Align text vertically to the center */
+    justify-content: center;
+    /* Align text horizontally to the center */
+    align-items: center;
+    /* Align text vertically to the center */
     color: #000;
     font-weight: 700;
     font-size: 16px;
@@ -96,7 +101,8 @@ input::placeholder {
     cursor: pointer;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 }
-.btn1{
+
+.btn1 {
     color: #ffffff;
     margin-top: 10px;
     background: rgb(0, 0, 0);
@@ -109,6 +115,7 @@ input::placeholder {
     cursor: pointer;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 }
+
 .group {
     display: flex;
     flex-direction: column;
