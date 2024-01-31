@@ -28,7 +28,7 @@ body {
     /* Display as column on small screens */
     justify-content: space-between;
     align-items: center;
-    background: url("./images/movie/bg-little-mermaid.jpg");
+    background: url("../images/movie/bg-little-mermaid.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
