@@ -68,7 +68,7 @@ nav ul li a:hover {
 }
 
 .menu-btn {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -88,7 +88,7 @@ nav ul li a:hover {
 
     nav ul {
         position: fixed;
-        top: 40px;
+        top: 60px;
         left: -150%;
         background-color: #000;
         height: 100vh;
