@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/log_reg.css">
+</head>
+<body>
+    <div class="loginsection">
+        <div class="imgBx">
+            <img src="./images/bg1.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <form accept="" name="Formfill" onsubmit="return validation()">
+                    <p id="result"></p>
+                    <div class="inputBx">
+                        <span>Username</span>
+                        <input type="text" name="Username">
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="text" name="Password">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" onclick="validation()" value="Sign in" name="">
+                    </div>
+                    <div class="inputBx">
+                        <p>Don't have an account? <a href="Register.html">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/err_log.js"></script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,108 +6,13 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: linear-gradient(#0d0d0e, #ffffff);
-}
-
-/*
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 20px; /* Adjusted padding for smaller screens 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 110000;
-}
-
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1.5em; /* Adjusted font size for smaller screens 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allow menu items to wrap on smaller screens 
-}
-
-header ul li {
-    list-style: none;
-    margin: 10px; /* Adjusted margin for smaller screens 
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: 6px 10px; /* Adjusted padding for smaller screens 
-    color: #fff;
-    border-radius: 20px;
-}
-*/
-header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    /* Adjusted height for smaller screens */
-    background: linear-gradient(to top, #000000, transparent);
-    z-index: 1000;
-}
-
-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-header img#moon {
-    mix-blend-mode: screen;
-}
-
-header img#mountains_front {
-    z-index: 10;
-}
-
-.sec {
-    position: relative;
-    padding: 50px;
-    /* Adjusted padding for smaller screens */
-    background: #000000;
-}
-
-section {
+section{
     width: 100%;
     background-color: #151515;
     position: relative;
 }
 
-section .container {
+section .about_container{
     padding: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,24 +21,24 @@ section .container {
     min-height: 100vh;
 }
 
-section img {
+section img{
     width: 100%;
 }
 
-section .container>* {
+section .about_container > *{
     margin: 2rem;
 }
 
-.content {
+.about_content{
     color: #fff;
     transform: translateY(-50px);
 }
 
-.imgContainer {
+.about_imgContainer{
     transform: translateY(50px);
 }
 
-.title {
+.about_title{
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -142,197 +46,18 @@ section .container>* {
     position: relative;
 }
 
-.border {
+.about_border{
     position: absolute;
-    width: 0%;
+    /*make this width to 0 and check at the time of scrolling whether its being displayed or not oke */
+    width: 34.5398%; 
     height: 3px;
     background-color: #fff;
     bottom: 0;
     left: 0;
 }
 
-.animation-show {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: 0.7s;
-}
-
-.active .animation-show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.animation-show:nth-child(2) {
-    transition-delay: 0.3s;
-}
-
-.animation-show:nth-child(3) {
-    transition-delay: 0.6s;
-}
-
-.animation-show:nth-child(4) {
-    transition-delay: 0.9s;
-}
-
-.library {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    color: #fff;
-}
-
-.library img {
-    width: 90%;
-    height: 500px;
-    object-fit: cover;
-}
-
-/* Media queries for different screen sizes 
-@media (max-width: 768px) {
-    header {
-        padding: 30px 10px;
+@media (max-width: 850px){
+    section .about_container{
+        grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 20px 10px;
-    }
-
-    #text {
-        right: -50px;
-    }
-}
-
-@media (max-width: 365px) {
-    header {
-        padding: 15px 10px;
-    }
-
-    #text {
-        right: -30px;
-        font-size: 3vw;
-    }
-}
-
-/*
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-    scroll-behavior: smooth;
-}
-body{
-   min-height: 100vh;
-   overflow-x: hidden;
-   background: linear-gradient(#2b1055,#7597de); 
-}
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 110000;
-}
-header .logo{
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-header ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header ul li{
-    list-style: none;
-    margin-left: 20px;
-}
-header ul li a{
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    border-radius: 20px;
-}
-header ul li a:hover,
-header ul li a:active{
-    background: #fff;
-    color: #2b1055;
-}
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-section::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top,#1c0522,transparent);
-    z-index: 1000;
-}
-section img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-section img#moon{
-    mix-blend-mode: screen;
-}
-section img#mountains_front{
-    z-index: 10;
-}
-#text{
-    position: absolute;
-    right: -350px;
-    color: #fff;
-    white-space:nowrap;
-    font-size: 7.5vw;
-    z-index: 9;
-}
-#btn{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
-    background: #fff;
-    color: #2b1055;
-    font-size: 1.5em;
-    z-index: 9;
-    transform: translateY(100px);
-}
-.sec{
-    position: relative;
-    padding: 100px;
-    background: #1c0522;
-}
-.sec h2{
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-.sec p{
-    font-size: 1em;
-    color: #fff;
 }
