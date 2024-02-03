@@ -29,7 +29,7 @@ body {
     color: white;
 }
 
-.header .logo {
+.header-nav .logo {
     height: 3rem;
 }
 
@@ -83,11 +83,11 @@ body {
 
 
 
-    .header {
+    .header-nav {
         position: relative;
     }
 
-    .header .logo {
+    .header-nav .logo {
         width: 40%;
     }
 
@@ -134,11 +134,11 @@ body {
 
 
 @media (max-width: 35em) {
-    .header {
+    .header-nav {
         padding: 0 2.4rem;
     }
 
-    .header .logo {
+    .header-nav .logo {
         width: 60%;
     }
 }
