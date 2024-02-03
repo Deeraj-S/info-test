@@ -1,4 +1,4 @@
- function validation(){
+function validation(){
     if(document.Formfill.Username.value==""){
         document.getElementById("result").innerHTML="Enter Username* ";
         return false;
@@ -23,12 +23,9 @@
         document.getElementById("result").innerHTML="Password dosen't match* ";
         return false;
     }
+    /*
     else if(document.Formfill.Password.value==document.Formfill.CPassword.value){
         popup.classList.add("open-slide");
         return false;
-    }
- }
- var popup=document.getElementById('popup');
- function closeSlide(){
-    popup.classList.remove('open-slide');
+    }*/
  }
