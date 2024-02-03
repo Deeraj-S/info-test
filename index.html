@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infovision-2k24</title>
     <link rel="stylesheet" href="style/home.css" />
+    <style>
+        .clock {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #countdown {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,10 +50,17 @@
                 <div class="bg">
                     <h1>INFOVISION</h1>
                 </div>
-                <div class="bg"></div>
-                <div class="bg"></div>
+                <div class="bg">
+                </div>
+                <div class="bg">
+                </div>
             </div>
         </div>
+        <div class="clock">
+
+            <div id="countdown"></div>
+        </div>
+
         <div class="tab tab1">
             <div class="content">
                 <h5>Welcome to</h5>
@@ -90,6 +111,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/time.js"></script>
 
 
 </body>

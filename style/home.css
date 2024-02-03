@@ -90,11 +90,11 @@ body {
 }
 
 .tab.tab1 {
-    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab1.png);
+    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(../images/tab1.png);
 }
 
 .tab.tab2 {
-    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab2.png);
+    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(../images/tab2.png);
 }
 
 .tab.tab1 .content {
