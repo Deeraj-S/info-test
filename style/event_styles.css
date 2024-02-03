@@ -8,6 +8,10 @@
     --primary: blue;
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -16,8 +20,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-
-
 
 .banner {
     position: relative;
