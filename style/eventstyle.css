@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: Poppins;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+}
+
+/* General Button Style */
+button {
+    background-color: #4825a8; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+/* Hover effect */
+button:hover {
+    background-color: #040675; 
+}
+
+/* Slide styles */
+.slider{
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 40%,transparent);
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}s
+.slider .list .item .content h2{
+    font-size: 40px;
+    margin: 0;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+.slider .list .item.active h4:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active h4:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active h4:nth-child(3){
+    animation-duration: 1.3s;
+}
+
+/* Arrows Styles */
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+.arrows button{
+    background-color: #eee5;
+    align-items: center;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: #000;
+}
+
+/* pop box */
+.popup {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 700px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: -25px;
+    opacity: 0;
+    transition: top 0ms ease-in-out 300ms, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1d1680 transparent;
+}
+.popup::-webkit-scrollbar {
+    width: 10px;
+}
+.popup::-webkit-scrollbar-thumb {
+    background-color: #000000; 
+    border-radius: 5px;
+    height: 60px;    
+}
+.popup::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+.popup h3,p{
+    color: #000;
+}
+.popup > * {
+    margin: 15px 0px;
+}
+.popup .close-btn {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    color: #111;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+body.active-popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+}
+body.active-popup {
+    overflow: hidden;
+}
+body.active-popup .item.active{
+    filter: blur(5px);
+    background: rgba(0, 0, 0, 0.8);
+    transition: filter 0ms ease-in-out 0ms;
+}
+body.active-popup .popup {
+    top: 50%;
+    opacity: 1;
+    margin-top: 0px;
+    z-index: 1000;
+    transition: top 0ms ease-in-out 0ms, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: -30px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+/* Responsive styles for max-width: 768px */
+@media screen and (max-width: 768px) {
+    .slider .list .item .content {
+        left: 5%;
+        top: 10%;
+        width: 90%;
+    }
+    .popup {
+        max-width: 90%;
+    }
+    .thumbnail {
+        padding: 0 10px;
+        height: 150px;
+        bottom: 50px;
+    }
+
+    .thumbnail .item {
+        width: 100px;
+        height: 120px;
+    }
+
+    .arrows {
+        top: 10%;
+        right: 10px;
+    }
+}
+
+/* Responsive styles for max-width: 480px */
+@media screen and (max-width: 480px) {
+    .slider .list .item .content {
+        left: 5%;
+        top: 10%;
+        width: 90%;
+    }
+    .popup {
+        padding: 15px;
+    }
+    .thumbnail {
+        padding: 0 10px;
+        height: 150px;
+        bottom: 30px;
+    }
+
+    .thumbnail .item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .arrows {
+        top: 10%;
+        right: 5px;
+    }
+}
+
+/* Responsive styles for max-width: 365px */
+@media screen and (max-width: 365px) {
+    .slider .list .item .content {
+        left: 5%;
+        top: 10%;
+        width: 90%;
+    }
+
+    .thumbnail {
+        padding: 0 5px;
+        height: 120px;
+        bottom: 20px;
+    }
+
+    .thumbnail .item {
+        width: 60px;
+        height: 100px;
+    }
+
+    .arrows {
+        top: 10%;
+        right: 5px;
+    }
+}
