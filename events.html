@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/event_styles.css">
+    <link rel="stylesheet" href="style/eventstyle.css">
     <link rel="stylesheet" href="style/nav.css">
-
+    <title>Document</title>
 </head>
 
 <body>
-
-    <header class="header">
-        <h2>INFOVISION</h2>
+    <header class="header" style="z-index:1000;position: relative;">
+        <a href="index.html">
+            <h2>INFOVISION</h2>
+        </a>
 
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a class="navbar-link" href="index.html">Home</a></li>
                 <li><a class="navbar-link" href="events.html">Events</a></li>
+                <li><a class="navbar-link" href="rules.html">Rules</a></li>
                 <li><a class="navbar-link" href="login.html">Login</a></li>
                 <li><a class="navbar-link" href="register.html">Register</a></li>
             </ul>
@@ -30,102 +29,131 @@
             <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
         </div>
     </header>
-    <div class="banner">
-        <div class="sub-banner">
-            <div class="content the-little-mermaid active">
-                <img src="./images/the-little-mermaid-title.png" alt="" class="movie-title">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eaque repudiandae velit dolor consequatur aperiam, assumenda
-                    quidem, voluptas minus iusto cumque ullam officiis ipsa quod
-                    tempora minima impedit eveniet asperiores qui?
-                </p>
-                <div class="button">
-                    <a href="#">See more details</a>
+    <div class="slider">
+
+        <div class="list">
+            <div class="item active">
+                <img src="images/movie/bg-65.jpeg">
+                <div class="content">
+                    <h2>Slider 01</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup">Open Popup</button></h4>
                 </div>
             </div>
-            <div class="content bg-65">
-                <img src="./images/the-65-title.png" alt="" class="movie-title">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eaque repudiandae velit dolor consequatur aperiam, assumenda
-                    quidem, voluptas minus iusto cumque ullam officiis ipsa quod
-                    tempora minima impedit eveniet asperiores qui?
-                </p>
-                <div class="button">
-                    <a href="#">See more details</a>
+            <div class="popup">
+                <button class="close-btn">&times;</button>
+                <h3 id="popupTitle"></h3>
+                <p id="popupContent"></p>
+            </div>
+            <div class="item">
+                <img src="images/movie/bg-little-mermaid.jpg">
+                <div class="content">
+                    <h2>Slider 02</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup1">Open Popup</button></h4>
                 </div>
             </div>
-            <div class="content the-covenant">
-                <img src="./images/the-covenant-title.png" alt="" class="movie-title">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eaque repudiandae velit dolor consequatur aperiam, assumenda
-                    quidem, voluptas minus iusto cumque ullam officiis ipsa quod
-                    tempora minima impedit eveniet asperiores qui?
-                </p>
-                <div class="button">
-                    <a href="#">See more details</a>
+            <div class="item">
+                <img src="images/movie/the-black-demon.jpg">
+                <div class="content">
+                    <h2>Slider 03</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup2">Open Popup</button></h4>
                 </div>
             </div>
-            <div class="content the-black-demon">
-                <img src="./images/the-black-demon-title.png" alt="" class="movie-title">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eaque repudiandae velit dolor consequatur aperiam, assumenda
-                    quidem, voluptas minus iusto cumque ullam officiis ipsa quod
-                    tempora minima impedit eveniet asperiores qui?
-                </p>
-                <div class="button">
-                    <a href="#">See more details</a>
+            <div class="item">
+                <img src="images/movie/bg-the-black-demon.jpeg">
+                <div class="content">
+                    <h2>Slider 04</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup3">Open Popup</button></h4>
                 </div>
             </div>
-            <div class="content the-tank">
-                <img src="./images/the-tank-title.png" alt="" class="movie-title">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eaque repudiandae velit dolor consequatur aperiam, assumenda
-                    quidem, voluptas minus iusto cumque ullam officiis ipsa quod
-                    tempora minima impedit eveniet asperiores qui?
-                </p>
-                <div class="button">
-                    <a href="#">See more details</a>
+            <div class="item">
+                <img src="images/movie/bg-the-covenant.jpeg">
+                <div class="content">
+                    <h2>Slider 05</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup4">Open Popup</button></h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/movie/the-tank.jpeg">
+                <div class="content">
+                    <h2>Slider 06</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat? Quod amet quis
+                        quas, minus a corrupti aperiam maiores dolorum omnis quo iure vitae assumenda ea velit veniam
+                        officiis esse!</h4>
+                    <h4><button id="open-popup5">Open Popup</button></h4>
                 </div>
             </div>
         </div>
+        <div class="arrows">
+            <button id="prev"><span>
+                    < </span></button>
 
-        <div class="carousel-box">
-            <div class="carousel">
-                <div class="carousel-item" onclick="changebg('bg-little-mermaid.jpg','the-the-little-mermaid')">
-                    <img src="./images/movie/the-little-mermaid.jpeg" alt="">
+            <button id="next">></button>
+        </div>
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="images/movie/bg-65.jpeg">
+                <div class="content">
+                    Name slider
                 </div>
-                <div class="carousel-item" onclick="changebg('bg-65.jpeg','bg-65')">
-                    <img src="./images/movie/65.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="images/movie/bg-little-mermaid.jpg">
+                <div class="content">
+                    Name slider
                 </div>
-                <div class="carousel-item" onclick="changebg('bg-the-covenant.jpeg','the-covenant')">
-                    <img src="./images/movie/the-covenant.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="images/movie/the-black-demon.jpg">
+                <div class="content">
+                    Name slider
                 </div>
-                <div class="carousel-item" onclick="changebg('bg-the-black-demon.jpeg','the-black-demon')">
-                    <img src="./images/movie/the-black-demon.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="images/movie/bg-the-black-demon.jpeg">
+                <div class="content">
+                    Name slider
                 </div>
-                <div class="carousel-item" onclick="changebg('bg-the-tank.jpeg','the-tank')">
-                    <img src="./images/movie/the-tank.jpeg" alt="">
+            </div>
+            <div class="item">
+                <img src="images/movie/bg-the-covenant.jpeg">
+                <div class="content">
+                    Name slider
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/movie/the-tank.jpeg">
+                <div class="content">
+                    Name slider
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.carousel').carousel();
-        });
-    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/eventapp.js"></script>
     <script src="js/nav.js"></script>
+
 </body>
 
 </html>

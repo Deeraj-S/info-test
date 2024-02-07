@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+
+body {
     font-family: Poppins;
     margin: 0;
     background-color: #010101;
@@ -8,86 +9,98 @@ body{
 
 /* General Button Style */
 button {
-    background-color: #4825a8; 
-    color: #fff; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
+    background-color: #4825a8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 /* Hover effect */
 button:hover {
-    background-color: #040675; 
+    background-color: #040675;
 }
 
 /* Slide styles */
-.slider{
+.slider {
     height: 100vh;
     margin-top: -50px;
     position: relative;
+    overflow: hidden;
 }
-.slider .list .item{
+
+.slider .list .item {
     position: absolute;
     inset: 0 0 0 0;
     overflow: hidden;
     opacity: 0;
     transition: .5s;
 }
-.slider .list .item img{
+
+.slider .list .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.slider .list .item::after{
+
+.slider .list .item::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #000 40%,transparent);
+    background-image: linear-gradient(to top, #000 40%, transparent);
 }
-.slider .list .item .content{
+
+.slider .list .item .content {
     position: absolute;
     left: 10%;
     top: 20%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
-}s
-.slider .list .item .content h2{
+}
+
+s .slider .list .item .content h2 {
     font-size: 40px;
     margin: 0;
 }
-.slider .list .item.active{
+
+.slider .list .item.active {
     opacity: 1;
     z-index: 10;
 }
+
 .slider .list .item.active h4:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active h4:nth-child(3){
+.slider .list .item.active h4:nth-child(3) {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
-.slider .list .item.active h2{
+
+.slider .list .item.active h2 {
     animation-delay: 1s;
 }
-.slider .list .item.active h4:nth-child(3){
+
+.slider .list .item.active h4:nth-child(3) {
     animation-duration: 1.3s;
 }
 
 /* Arrows Styles */
-.arrows{
+.arrows {
     position: absolute;
     top: 30%;
     right: 50px;
     z-index: 100;
 }
-.arrows button{
+
+.arrows button {
     background-color: #eee5;
     align-items: center;
     border: none;
@@ -99,7 +112,8 @@ button:hover {
     color: #eee;
     transition: .5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     background-color: #eee;
     color: #000;
 }
@@ -124,23 +138,30 @@ button:hover {
     scrollbar-width: thin;
     scrollbar-color: #1d1680 transparent;
 }
+
 .popup::-webkit-scrollbar {
     width: 10px;
 }
+
 .popup::-webkit-scrollbar-thumb {
-    background-color: #000000; 
+    background-color: #000000;
     border-radius: 5px;
-    height: 60px;    
+    height: 60px;
 }
+
 .popup::-webkit-scrollbar-track {
-    background-color: transparent; 
+    background-color: transparent;
 }
-.popup h3,p{
+
+.popup h3,
+p {
     color: #000;
 }
-.popup > * {
+
+.popup>* {
     margin: 15px 0px;
 }
+
 .popup .close-btn {
     position: absolute;
     top: -5px;
@@ -154,6 +175,7 @@ button:hover {
     border-radius: 50%;
     cursor: pointer;
 }
+
 body.active-popup::before {
     content: "";
     position: fixed;
@@ -164,14 +186,17 @@ body.active-popup::before {
     background: inherit;
     filter: blur(5px);
 }
+
 body.active-popup {
     overflow: hidden;
 }
-body.active-popup .item.active{
+
+body.active-popup .item.active {
     filter: blur(5px);
     background: rgba(0, 0, 0, 0.8);
     transition: filter 0ms ease-in-out 0ms;
 }
+
 body.active-popup .popup {
     top: 50%;
     opacity: 1;
@@ -179,15 +204,16 @@ body.active-popup .popup {
     z-index: 1000;
     transition: top 0ms ease-in-out 0ms, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
 }
-@keyframes showContent{
-    to{
+
+@keyframes showContent {
+    to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
 }
 
-.thumbnail{
+.thumbnail {
     position: absolute;
     bottom: -30px;
     z-index: 11;
@@ -197,29 +223,35 @@ body.active-popup .popup {
     height: 250px;
     padding: 0 50px;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
+    /* Updated this line to hide the scrollbar */
     justify-content: center;
 }
-.thumbnail::-webkit-scrollbar{
+
+.thumbnail::-webkit-scrollbar {
     width: 0;
 }
-.thumbnail .item{
+
+.thumbnail .item {
     width: 150px;
     height: 220px;
     filter: brightness(.5);
     transition: .5s;
     flex-shrink: 0;
 }
-.thumbnail .item img{
+
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.thumbnail .item.active{
+
+.thumbnail .item.active {
     filter: brightness(1.5);
 }
-.thumbnail .item .content{
+
+.thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
 }
@@ -231,9 +263,11 @@ body.active-popup .popup {
         top: 10%;
         width: 90%;
     }
+
     .popup {
         max-width: 90%;
     }
+
     .thumbnail {
         padding: 0 10px;
         height: 150px;
@@ -258,9 +292,11 @@ body.active-popup .popup {
         top: 10%;
         width: 90%;
     }
+
     .popup {
         padding: 15px;
     }
+
     .thumbnail {
         padding: 0 10px;
         height: 150px;

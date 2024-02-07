@@ -21,3 +21,4 @@ const toggleNavbar = () => {
 };
 
 mobile_nav.addEventListener("click", () => toggleNavbar());
+
