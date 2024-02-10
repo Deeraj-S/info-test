@@ -36,21 +36,26 @@
         </div>
         <div class="contentBx">
             <div class="formBx">
-                <h2>Forget Password</h2>
+                <h2>Reset Password</h2>
                 <form accept="" name="Formfill" onsubmit="return validation()">
                     <p id="result"></p>
                     <div class="inputBx">
-                        <span>Email</span>
-                        <input type="email" name="Email">
+                        <span>Password</span>
+                        <input type="text" name="Password">
                     </div>
                     <div class="inputBx">
-                        <input type="submit" onclick="validation()" value="Submit" name="">
+                        <span>Confirm Password</span>
+                        <input type="text" name="CPassword">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" onclick="validation()" value="Reset password" name="">
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
-    <script src="js/forgotscript.js"></script>
+    <script src="js/err_reset.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/nav.js"></script>
