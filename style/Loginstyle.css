@@ -80,6 +80,12 @@
     margin-bottom: 20px;
 }
 
+.loginsection .contentBx .formBx .inputBx h4{
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #0c346b;
+    text-decoration: none;
+}
 .loginsection .contentBx .formBx .inputBx span {
     font-size: 16px;
     margin-bottom: 5px;

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/regstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-title">Registration</h2>
+        <h3>Add your team participant details. If you dont have participants participating in the particular event enter "NA"</h3>
+        <form accept="" name="Formfill" onsubmit="return validation()">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="collegename">College Name</label>
+                    <input type="text" id="collegename" name="collegename" placeholder="Enter college name"/>
+                </div>
+                <div class="user-input-box">
+                    <label for="codeweb">Event Name: Coding and Web</label>
+                    <div class="participant">
+                        <input type="text" id="codeweb1" name="codeweb1" placeholder="Participant 1"/>
+                        <input type="text" id="codewebemail1" name="codewebemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="codeweb2" name="codeweb2" placeholder="Participant 2"/>
+                        <input type="text" id="codewebemail2" name="codewebemail2" placeholder="Email id"/>
+                    </div> 
+                </div>
+                <div class="user-input-box">
+                    <label for="quiz">Event Name: IT quiz</label>
+                    <div class="participant">
+                        <input type="text" id="quiz1" name="quiz1" placeholder="Participant 1"/>
+                        <input type="text" id="quizemail1" name="quizemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="quiz2" name="quiz12" placeholder="Participant 2"/>
+                        <input type="text" id="quizemail2" name="quizemail2" placeholder="Email id"/>
+                    </div>
+                </div>
+                <div class="user-input-box">
+                    <label for="gaming">Event Name: Gaming</label>
+                    <div class="participant">
+                        <input type="text" id="gaming1" name="gaming1" placeholder="Participant 1"/>
+                        <input type="text" id="gamingemail1" name="gamingemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="gaming2" name="gaming2" placeholder="Participant 2"/>
+                        <input type="text" id="gamingemail2" name="gamingemail2" placeholder="Email id"/>
+                    </div>
+                </div>
+                <div class="user-input-box">
+                    <label for="modelmaking">Event Name: Model Making</label>
+                    <div class="participant">
+                        <input type="text" id="modelmaking1" name="modelmaking1" placeholder="Participant 1"/>
+                        <input type="text" id="modelmakingemail1" name="modelmakingemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="modelmaking2" name="modelmaking2" placeholder="Participant 2"/>
+                        <input type="text" id="modelmakingemail2" name="modelmakingemail2" placeholder="Email id"/>
+                    </div>
+                </div>
+                <div class="user-input-box">
+                    <label for="paper">Event Name: Paper Presentation</label>
+                    <div class="participant">
+                        <input type="text" id="paper1" name="paper1" placeholder="Participant 1"/>
+                        <input type="text" id="paperemail1" name="paperemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="paper2" name="paper2" placeholder="Participant 2"/>
+                        <input type="text" id="paperemail2" name="paperemail2" placeholder="Email id"/>
+                    </div>
+                </div>
+                <div class="user-input-box">
+                    <label for="cultural">Event Name: Cultural</label>
+                    <div class="participant">
+                        <input type="text" id="cultural1" name="cultural1" placeholder="Participant 1"/>
+                        <input type="text" id="culturalemail1" name="culturalemail1" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="cultural2" name="cultural2" placeholder="Participant 2"/>
+                        <input type="text" id="culturalemail2" name="cculturalemail2" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="cultural3" name="cultural3" placeholder="Participant 3"/>
+                        <input type="text" id="culturalemail3" name="culturalemail3" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="cultural4" name="cultural4" placeholder="Participant 4"/>
+                        <input type="text" id="culturalemail4" name="cculturalemail4" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="cultural5" name="cultural5" placeholder="Participant 5"/>
+                        <input type="text" id="culturalemail5" name="culturalemail5" placeholder="Email id"/>
+                    </div>
+                    <div class="participant">
+                        <input type="text" id="cultural6" name="cultural6" placeholder="Participant 6"/>
+                        <input type="text" id="culturalemail6" name="culturalemail6" placeholder="Email id"/>
+                    </div>
+                </div>
+            </div>
+            <p id="result"></p>
+            <div class="form-submit-btn">
+                <input type="submit" onclick="validation()" value="Register">
+            </div>
+        </form>
+    </div>
+    <script src="./js/err_registration.js"></script>
+</body>
+</html>
