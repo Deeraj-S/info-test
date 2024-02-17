@@ -251,6 +251,7 @@ body.active-popup .popup {
     filter: brightness(1.5);
 }
 
+
 .thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
