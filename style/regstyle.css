@@ -125,4 +125,13 @@ body{
     .main-user-info::-webkit-scrollbar{
         width: 0;
     }
+    .participant{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-input-box  input{
+        padding: 0.8rem;
+        width: 100%;
+    }
 }
